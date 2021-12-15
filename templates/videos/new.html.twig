@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Videos{% endblock %}
+
+{% block body %}
+<div style="float:left">
+  <a href="{{ path('videos_admin') }}" title="Atras"><i class="bi bi-backspace"></i></a>
+</div>
+</br>
+    <h1>Añadir Nuevo Video</h1>
+
+    {{ include('videos/_form.html.twig') }}
+
+   
+{% endblock %}

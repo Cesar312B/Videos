@@ -1,0 +1,27 @@
+{{ form_start(form) }}
+  
+    
+
+
+
+
+   {{ form_row(form.Nombre) }}
+
+
+<div class="input-group mb-3">
+   {{ form_row(form.Descripcion) }}
+</div>
+
+<label  class="form-label">Archivos</label>
+<div class="input-group mb-3">
+   {{ form_row(form.file) }}
+
+</div>
+
+<div class="input-group mb-3">
+   {{ form_row(form.Caratula) }}
+
+</div>
+
+<button class="btn btn-info btn-lg btn-block">{{ button_label|default('Guardar') }}</button>
+{{ form_end(form) }}

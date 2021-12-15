@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Videos{% endblock %}
+
+{% block body %}
+<div style="float:right">
+    {{ include('videos/_delete_form.html.twig') }}
+</div>
+<div style="float:left">
+  <a href="{{ path('videos_admin') }}" title="Atras"><i class="bi bi-backspace"></i></a>
+</div>
+</br>
+    <h1>Editar Video</h1>
+     {% for message in app.flashes('notice') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    
+     <video
+    id="my-video"
+    class="video-js card-img-top  rounded-start "
+    controls= "true"
+    volume = 1
+    preload="auto"
+    loop= "true"
+    alt="Card image"
+    poster="{{ asset('caratula/'~video.Caratula) }}"
+    data-setup="{}"
+  >
+    <source src="{{ asset('file/'~video.file) }}" type="video/mp4" />
+  </video>
+
+    {{ include('videos/_form.html.twig', {'button_label': 'Actualizar'}) }}
+
+    
+
+{% endblock %}

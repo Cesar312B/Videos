@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Videos{% endblock %}
+
+{% block body %}
+    <a href="{{ path('videos_index') }}" title="Atras"><i class="bi bi-backspace"></i></a>
+
+  <div class="card mb-3 border-3 rounded-3 border-light shadow-lg">
+  <video
+    id="my-video"
+    class="video-js card-img-top  rounded-start "
+    controls= "true"
+    volume = 1
+    autoplay= "true"
+    preload="auto"
+    loop= "true"
+    alt="Card image"
+    poster="{{ asset('caratula/'~video.Caratula) }}"
+    data-setup="{}"
+  >
+    <source src="{{ asset('file/'~video.file) }}" type="video/mp4" />
+  </video>
+  <div class="card-body">
+    <h5 class="card-title">{{ video.Nombre}}</h5>
+    <p class="card-text">{{ video.Descripcion|raw }}</p>
+  </div>
+</div>
+
+
+
+
+
+     
+
+
+    
+{% endblock %}

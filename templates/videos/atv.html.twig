@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Videos index{% endblock %}
+
+{% block body %}
+  <a href="{{ path('videos_index') }}" class="btn btn-info btn-lg btn-block" title="Recargar toda la lista"><i class="bi bi-list-task"></i></a>
+  {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-info btn-lg btn-block">{{ button_label|default('Buscar') }}</button>
+{{ form_end(form) }}
+
+
+
+
+ 
+{% endblock %}

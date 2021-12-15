@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title></title>
+    <link rel="stylesheet" href="{{ asset('css/email.css') }}">
+</head>
+<body>
+<td class="esd-stripe esd-checked" align="center" style="background-color: transparent;" bgcolor="transparent" esd-custom-block-id="47888">
+    <table bgcolor="#090101" class="es-content-body" align="center" cellpadding="0" cellspacing="0" width="600" style="background-image:url(https://tlr.stripocdn.email/content/guids/CABINET_d6b02eef486e424923e42d33952bbae0/images/79241561453270953.jpg);background-color: #090101; background-position: center top; background-repeat: no-repeat;">
+        <tbody>
+            <tr>
+                <td class="esd-structure es-p20t" align="left">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="600" class="esd-container-frame" align="left">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr class="esd-mobile-hidden">
+                                                <td align="center" class="esd-block-spacer" height="47"></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" class="esd-block-text es-p25r es-p25l es-m-txt-l">
+                                                
+                                                    <h1 style="line-height: 150%;">Activa tu cuenta!</h1>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="esd-structure es-p10t" align="left" style="background-position: center top;">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="600" class="esd-container-frame" align="center" valign="top">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td align="left" class="esd-block-button es-p15t es-p10b es-p20r es-p20l"><span class="es-button-border"><a href="{{ signedUrl }}" class="es-button es-button-1638806296742" target="_blank" style="border-width: 10px 25px;">Activar Cuenta</a></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" class="esd-block-text es-m-txt-l es-p25r es-p25l">
+                                                    <h5 style="line-height: 150%; color: #ffffff;">Has clic en el boton </h5>
+                                                     El link expirara en  {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" class="esd-block-spacer" height="58"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</td>
+</body>
+</html>

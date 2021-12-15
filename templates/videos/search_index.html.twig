@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Videos index{% endblock %}
+
+{% block body %}
+  <a href="{{ path('videos_index') }}" class="btn btn-info btn-lg btn-block" title="Recargar toda la lista"><i class="bi bi-list-task"></i></a>
+  {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn btn-info btn-lg btn-block">{{ button_label|default('Buscar') }}</button>
+{{ form_end(form) }}
+
+
+    <h1>Videos</h1>
+  <div class="d-flex justify-content-center">
+
+<table>
+
+  {% for var in videos %}
+    {% if not (loop.index0 % 7) %}<tr>{% endif %}
+    <td>
+
+
+
+  <div class="col">
+    <div class="card col-md-9  border-3 rounded-3 border-light shadow-lg">
+      <img src="{{ asset('caratula/'~var.Caratula) }}" class="card-img-top" alt="Card image">
+      <div class="card-body">
+        <h5 class="card-title">{{ var.Nombre }}</h5>
+        <p class="card-text">{{ var.Descripcion|raw}}</p>
+         </br>
+    <a href="{{ path('videos_show', {'id': var.id}) }}" class="btn btn-info btn-lg btn-block" title="Ver"><i class="bi bi-collection-play-fill"></i></a>
+
+
+      </div>
+    </div>
+  </div>
+ 
+    </td>
+    {% if (loop.index % 2) and loop.last %}
+      <td>&nbsp</td>
+    {% endif %}
+    {% if (loop.index % 3) and loop.last %}
+      <td>&nbsp</td>
+    {% endif %}
+    {% if not (loop.index % 3) or loop.last %}</tr>{% endif %}
+  {% endfor %}
+</table>
+ </div>
+
+
+ 
+{% endblock %}
